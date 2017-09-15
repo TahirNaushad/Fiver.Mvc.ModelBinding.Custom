@@ -1,4 +1,4 @@
-﻿using FFiver.Mvc.ModelBinding.Custom.Lib;
+﻿using Fiver.Mvc.ModelBinding.Custom.Lib;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +15,7 @@ namespace Fiver.Mvc.ModelBinding.Custom
             services.AddMvc(options =>
             {
                 options.ModelBinderProviders.Insert(0, new ProtectedIdModelBinderProvider());
+                options.Filters.Add(typeof(ProtectedIdResultFilter));
             });
         }
 

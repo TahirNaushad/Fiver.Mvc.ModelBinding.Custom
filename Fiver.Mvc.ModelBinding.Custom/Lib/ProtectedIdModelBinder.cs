@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Threading.Tasks;
 
-namespace FFiver.Mvc.ModelBinding.Custom.Lib
+namespace Fiver.Mvc.ModelBinding.Custom.Lib
 {
     public class ProtectedIdModelBinder : IModelBinder
     {

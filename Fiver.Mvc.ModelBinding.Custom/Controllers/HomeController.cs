@@ -1,5 +1,4 @@
 ﻿using Fiver.Mvc.ModelBinding.Custom.Models.Home;
-using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -7,19 +6,9 @@ namespace Fiver.Mvc.ModelBinding.Custom.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IDataProtector protector;
-        
-        public HomeController(IDataProtectionProvider provider)
+        public IActionResult Index()
         {
-            this.protector = provider.CreateProtector("protect_my_query_string");
-        }
-
-        public IActionResult Index(int id)
-        {
-            var model = GetMovies(); // simulate call to repository
-
-            model.ForEach(item => item.Id = this.protector.Protect(item.Id.ToString()));
-            
+            var model = GetMovies();
             return View(model);
         }
 

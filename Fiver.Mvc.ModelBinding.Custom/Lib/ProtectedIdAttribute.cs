@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FFiver.Mvc.ModelBinding.Custom.Lib
+namespace Fiver.Mvc.ModelBinding.Custom.Lib
 {
     public class ProtectedIdAttribute 
         : Attribute, IProtectedIdAttribute

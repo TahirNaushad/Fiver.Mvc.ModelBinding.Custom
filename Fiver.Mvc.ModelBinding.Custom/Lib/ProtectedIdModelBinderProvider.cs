@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using System.Linq;
 
-namespace FFiver.Mvc.ModelBinding.Custom.Lib
+namespace Fiver.Mvc.ModelBinding.Custom.Lib
 {
     public class ProtectedIdModelBinderProvider : IModelBinderProvider
     {
