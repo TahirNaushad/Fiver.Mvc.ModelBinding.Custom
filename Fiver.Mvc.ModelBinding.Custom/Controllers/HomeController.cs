@@ -8,7 +8,7 @@ namespace Fiver.Mvc.ModelBinding.Custom.Controllers
     {
         public IActionResult Index()
         {
-            var model = GetMovies();
+            List<MovieViewModel> model = GetMovies();
             return View(model);
         }
 
